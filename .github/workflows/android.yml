@@ -22,6 +22,7 @@ jobs:
     - name: Run Espresso Tests
       uses: ReactiveCircus/android-emulator-runner@v2.28.0
       with:
+        distribution: 'bionic'
         api-level: ${{ matrix.api-level }}
         arch: x86_64
         profile: Nexus 6
