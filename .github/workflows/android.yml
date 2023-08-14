@@ -11,7 +11,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        api-level: [28, 26]
+        api-level: [30]
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -25,7 +25,7 @@ jobs:
         distribution: 'bionic'
         api-level: ${{ matrix.api-level }}
         arch: x86_64
-        profile: Nexus 6
+        profile: Pixel 3a
         script: |
           ./gradlew build
           ./gradlew connectedDebugAndroidTest -Pcucumber -Ptegas="@e2e"
