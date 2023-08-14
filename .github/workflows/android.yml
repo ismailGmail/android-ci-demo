@@ -22,8 +22,10 @@ jobs:
         java-version: '11'        
     - name: Run Espresso Tests
       uses: ReactiveCircus/android-emulator-runner@v2.28.0
+      run: ./gradlew build
       with:
-          api-level:28          
+          api-level:28
+          target: default
           arch: x86_64
           profile: Nexus 6
           script:./gradlew connectedDebugAndroidTest -Pcucumber -Ptegas="@e2e"
