@@ -27,5 +27,5 @@ jobs:
         arch: x86_64
         profile: Pixel 3a
         script: |
-          ./gradlew build
+          
           ./gradlew connectedDebugAndroidTest -Pcucumber -Ptegas="@e2e"
