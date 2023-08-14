@@ -24,7 +24,7 @@ jobs:
       uses: ReactiveCircus/android-emulator-runner@v2.28.0
       with:
           api-level:28
-          target: default
+          target: [default]
           arch: x86_64
           profile: Nexus 6
           script:./gradlew connectedDebugAndroidTest -Pcucumber -Ptegas="@e2e"
